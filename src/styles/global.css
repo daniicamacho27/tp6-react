@@ -11,8 +11,6 @@ body{
   padding: 40px;
 }
 
-
-
 .app{
   max-width: 1200px;
   margin: auto;
@@ -166,6 +164,82 @@ button:hover{
   cursor: not-allowed;
 }
 
+.form-container{
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 25px;
+  margin-top: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.form-container h2{
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 32px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group label{
+  color: white;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea{
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 16px;
+}
+
+.form-group textarea{
+  resize: none;
+  height: 120px;
+}
+
+.form-btn{
+  width: 100%;
+  background: linear-gradient(135deg, #ff1493, #c44dff);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-btn:hover{
+  transform: scale(1.03);
+}
+
+.form-btn:disabled{
+  background: gray;
+  cursor: not-allowed;
+}
+
+.preview{
+  margin-top: 30px;
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 18px;
+  color: white;
+}
+
+.preview h3{
+  margin-bottom: 15px;
+  color: #ffe4f7;
+}
 .footer{
   background: rgba(255,255,255,0.15);
   backdrop-filter: blur(10px);
