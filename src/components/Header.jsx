@@ -1,4 +1,4 @@
-function Header({ mostrarProductos }) {
+function Header({ mostrarProductos,mostrarContacto }) {
   return (
     <header className="header">
 
@@ -7,23 +7,28 @@ function Header({ mostrarProductos }) {
       </h1>
 
       <p>
-        Conectando tu mundo con la mejor tecnología. Descúbrelo en Prime Ventas.
+        Conectando tu mundo con la mejor tecnología.
       </p>
 
       <nav>
         <ul>
-          <li>Inicio</li>
+          <li onClick={() => window.location.reload()}>
+            Inicio
+          </li>
 
           <li onClick={mostrarProductos}>
             Productos
           </li>
 
-          <li>Contacto</li>
+          <li onClick={mostrarContacto}>
+            Contacto
+          </li>
+
         </ul>
       </nav>
 
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

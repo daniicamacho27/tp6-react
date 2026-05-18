@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./styles/global.css";
+
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Card from "./components/Card";
@@ -7,17 +8,18 @@ import Contador from "./components/Contador";
 import ContactForm from "./components/ContactForm";
 
 function App() {
-  const [vista, setVista] = useState("productos");
+  const [vista, setVista] = useState("Inicio");
 
   return (
     <div className="app">
 
       <Header
-        mostrarProductos={() => setVista("productos")}
-        mostrarContacto={() => setVista("contacto")}
+      mostrarProductos={() => setMostrarProductos(!mostrarProductos)}
+      mostrarContacto={() => setMostrarContacto(!mostrarContacto)}
       />
 
       {vista === "productos" && (
+
         <div className="cards-container">
 
           <Card
@@ -51,13 +53,13 @@ function App() {
       )}
 
       {vista === "contacto" && (
-        <ContactForm onSuccess={() => setVista("productos")} />
+        <ContactForm />
       )}
 
       <Contador />
-      <ContactForm/>
 
       <Footer />
+      
     </div>
   );
 }

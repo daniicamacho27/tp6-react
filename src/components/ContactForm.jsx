@@ -56,7 +56,7 @@ function ContactForm() {
 
         <button
           type="submit"
-          disabled={!nombre || !email || !mensaje}
+          disabled={!nombre || !email || !telefono || !mensaje}
         >
           Enviar
         </button>
