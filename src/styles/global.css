@@ -1,3 +1,12 @@
+:root{
+  --rosa: #ff1493;
+  --fuxia: #c44dff;
+  --blanco: #ffffff;
+  --gris: #555;
+  --sombra: 0 10px 25px rgba(0,0,0,0.2);
+  --radius: 20px;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -15,7 +24,6 @@ body{
   max-width: 1200px;
   margin: auto;
 }
-
 
 .header{
   background: rgba(255,255,255,0.15);
@@ -61,7 +69,6 @@ nav li:hover{
   color: #ffd1ec;
 }
 
-
 .cards-container{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -74,11 +81,12 @@ nav li:hover{
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .card:hover{
   transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
 .card-img{
@@ -106,7 +114,6 @@ nav li:hover{
   margin-bottom: 15px;
 }
 
-
 button{
   background: linear-gradient(135deg,#ff1493,#c44dff);
   color: white;
@@ -122,7 +129,6 @@ button:hover{
   transform: scale(1.05);
   opacity: 0.9;
 }
-
 
 .contador{
   background: white;
@@ -220,6 +226,14 @@ form{
   height: 120px;
 }
 
+.form-group input:focus,
+.form-group textarea:focus,
+.todo-form input:focus,
+.filtros select:focus{
+  border: 2px solid var(--rosa);
+  box-shadow: 0 0 10px rgba(255,20,147,0.5);
+}
+
 .form-btn{
   width: 100%;
   background: linear-gradient(135deg, #ff1493, #c44dff);
@@ -296,4 +310,70 @@ form{
   width: 100%;
   margin-top: 30px;
   font-size: 32px;
+}
+.todo-container{
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  padding: 35px;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.todo-container h2{
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.todo-form{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.todo-form input{
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+}
+
+.pendientes{
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sin-tareas{
+  color: white;
+  text-align: center;
+}
+
+.lista-tareas{
+  list-style: none;
+}
+
+.tarea-item{
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.completada{
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: #dcdcdc;
+}
+
+.acciones{
+  display: flex;
+  gap: 10px;
 }

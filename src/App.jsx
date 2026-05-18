@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Contador from "./components/Contador";
 import ContactForm from "./components/ContactForm";
 import ProductList from "./components/ProductList";
+import TodoApp from "./components/TodoApp";
 
 function App() {
 
@@ -37,6 +38,8 @@ function App() {
       )}
 
       <Contador />
+
+      <TodoApp />
 
       <Footer />
 
