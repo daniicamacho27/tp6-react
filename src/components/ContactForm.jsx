@@ -5,6 +5,7 @@ function ContactForm() {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [mensaje, setMensaje] = useState("");
+  const [telefono,setTelefono] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,7 +13,8 @@ function ContactForm() {
     console.log({
       nombre,
       email,
-      mensaje
+      mensaje,
+      telefono
     });
 
     alert("Mensaje enviado ");
@@ -37,6 +39,13 @@ function ContactForm() {
           placeholder="Tu email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+         type="tel"
+         placeholder="Tu teléfono"
+         value={telefono}
+          onChange={(e) => setTelefono(e.target.value)}
         />
 
         <textarea
