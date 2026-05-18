@@ -30,7 +30,21 @@ function App() {
       )}
 
     {vista === "productos" && (
+      <>
+
       <ProductList />
+
+      <div className="comprar-container">
+
+      <button 
+        className="btn-comprar"
+        onClick={() => alert("Gracias por tu compra")}
+      >
+        Comprar Productos
+      </button>
+      
+    </div>
+  </>
     )}
 
       {vista === "contacto" && (
