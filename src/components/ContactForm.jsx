@@ -21,47 +21,65 @@ function ContactForm() {
   };
 
   return (
-    <div className="contact-form">
+    <div className="form-container">
 
-      <h2>Contacto</h2>
+      <h2>Formulario de contacto: </h2>
 
       <form onSubmit={handleSubmit}>
 
-        <input
-          type="text"
-          placeholder="Tu nombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-        />
+  <div className="form-row">
 
-        <input
-          type="email"
-          placeholder="Tu email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+    <div className="form-group">
+      <input
+        type="text"
+        placeholder="Tu nombre"
+        value={nombre}
+        onChange={(e) => setNombre(e.target.value)}
+      />
+    </div>
 
-        <input
-         type="tel"
-         placeholder="Tu teléfono"
-         value={telefono}
-          onChange={(e) => setTelefono(e.target.value)}
-        />
+    <div className="form-group">
+      <input
+        type="email"
+        placeholder="Tu email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+    </div>
 
-        <textarea
-          placeholder="Escribí tu mensaje"
-          value={mensaje}
-          onChange={(e) => setMensaje(e.target.value)}
-        />
+  </div>
 
-        <button
-          type="submit"
-          disabled={!nombre || !email || !telefono || !mensaje}
-        >
-          Enviar
-        </button>
+  <div className="form-row">
 
-      </form>
+    <div className="form-group">
+      <input
+        type="tel"
+        placeholder="Tu teléfono"
+        value={telefono}
+        onChange={(e) => setTelefono(e.target.value)}
+      />
+    </div>
+
+  </div>
+
+  <div className="form-group">
+    <textarea
+      placeholder="Escribí tu mensaje"
+      value={mensaje}
+      onChange={(e) => setMensaje(e.target.value)}
+    />
+  </div>
+
+  <button
+    className="form-btn"
+    type="submit"
+    disabled={!nombre || !email || !telefono || !mensaje}
+  >
+    Enviar
+  </button>
+
+</form>
+
 
       <div className="preview">
 
@@ -72,6 +90,8 @@ function ContactForm() {
         <p><strong>Email:</strong> {email}</p>
 
         <p><strong>Mensaje:</strong> {mensaje}</p>
+
+        <p><strong>Teléfono:</strong> {telefono}</p>
 
       </div>
 

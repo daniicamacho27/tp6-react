@@ -3,54 +3,34 @@ import "./styles/global.css";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Card from "./components/Card";
 import Contador from "./components/Contador";
 import ContactForm from "./components/ContactForm";
+import ProductList from "./components/ProductList";
 
 function App() {
-  const [vista, setVista] = useState("Inicio");
+
+  const [vista, setVista] = useState("inicio");
 
   return (
     <div className="app">
 
       <Header
-      mostrarProductos={() => setMostrarProductos(!mostrarProductos)}
-      mostrarContacto={() => setMostrarContacto(!mostrarContacto)}
+        mostrarProductos={() => setVista("productos")}
+        mostrarContacto={() => setVista("contacto")}
       />
 
-      {vista === "productos" && (
-
-        <div className="cards-container">
-
-          <Card
-            titulo="Notebook Gamer"
-            descripcion="Potencia máxima para gaming y estudio."
-            imagen="https://images.unsplash.com/photo-1640695257754-7e2932f9ad0f?q=80&w=870&auto=format&fit=crop"
-            precio={2500}
-          />
-
-          <Card
-            titulo="Auriculares RGB"
-            descripcion="Sonido envolvente y diseño moderno."
-            imagen="https://images.unsplash.com/photo-1592084843797-2ea293a5db98?q=80&w=870&auto=format&fit=crop"
-            precio={350}
-          />
-
-          <Card
-            titulo="Iphone Pro"
-            descripcion="Cámara premium y batería duradera."
-            imagen="https://images.unsplash.com/photo-1716487637579-08069dd12c93?q=80&w=870&auto=format&fit=crop"
-            precio={1800}
-          />
-
-          <Card
-            titulo="Teclado Mecánico"
-            descripcion="Ideal para programar y jugar."
-            imagen="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?q=80&w=965&auto=format&fit=crop"
-          />
-
+      {vista === "inicio" && (
+        <div className="contador">
+          <h2>Bienvenidos a Prime Ventas</h2>
+          <p>
+            "El éxito de una empresa no se mide solo por lo que vende, sino por la confianza que construye en cada cliente."
+          </p>
         </div>
       )}
+
+    {vista === "productos" && (
+      <ProductList />
+    )}
 
       {vista === "contacto" && (
         <ContactForm />
@@ -59,7 +39,7 @@ function App() {
       <Contador />
 
       <Footer />
-      
+
     </div>
   );
 }

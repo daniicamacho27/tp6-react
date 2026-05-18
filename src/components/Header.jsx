@@ -7,7 +7,7 @@ function Header({ mostrarProductos,mostrarContacto }) {
       </h1>
 
       <p>
-        Conectando tu mundo con la mejor tecnología.
+        La solución a tus necesidades diarias, en un solo lugar.
       </p>
 
       <nav>
