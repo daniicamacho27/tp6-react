@@ -377,3 +377,27 @@ form{
   display: flex;
   gap: 10px;
 }
+
+.comprar-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.btn-comprar{
+  padding: 18px 35px;
+  font-size: 20px;
+  border-radius: 15px;
+  background: linear-gradient(135deg,#ff1493,#c44dff);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.btn-comprar:hover{
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
