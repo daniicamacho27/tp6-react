@@ -1,16 +1,36 @@
-# React + Vite
+# Prime Ventas
+Aplicación web desarrollada con React y Vite.  
+Simula una tienda tecnológica moderna con productos, formulario de contacto, contador interactivo y lista de tareas.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologías utilizadas
+* React
+* Vite
+* JavaScript
+* CSS3
 
-Currently, two official plugins are available:
+## Funcionalidades
+* Header y Footer reutilizables
+* Cards de productos reutilizables con props
+* Contador interactivo con useState
+* Formulario controlado con preview en vivo
+* Lista de productos con filtros
+* To-Do App completa (CRUD)
+* Diseño responsive y moderno
+* Navegación dinámica entre secciones
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Capturas de pantalla
 
-## React Compiler
+### Inicio
+![Inicio](./capturas/inicio.png)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Productos
+![Productos](./capturas/productos.png)
 
-## Expanding the ESLint configuration
+### Contacto
+![Contacto](./capturas/contacto.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Todo App
+![Todo](./capturas/todo.png)
+
+### Proyecto 
+http://localhost:5174/
