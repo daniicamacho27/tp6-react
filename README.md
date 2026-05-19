@@ -20,17 +20,14 @@ Simula una tienda tecnológica moderna con productos, formulario de contacto, co
 
 ## Capturas de pantalla
 
-### Inicio
-![Inicio](./capturas/inicio.png)
+### Disposicion Desktop
+![Desktop](./capturas/pc.png)
 
-### Productos
-![Productos](./capturas/productos.png)
+### Disposicion Phone
+![Phone](./capturas/celular.png)
 
-### Contacto
-![Contacto](./capturas/contacto.png)
-
-### Todo App
-![Todo](./capturas/todo.png)
+### Focus
+![Focus](./capturas/focus.png)
 
 ### Proyecto 
 http://localhost:5174/
